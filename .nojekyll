@@ -1,0 +1,2 @@
+# This file disables the output directory from being committed
+out/

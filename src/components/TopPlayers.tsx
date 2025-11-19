@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { fetchChallengerLadder, getMockTopPlayers } from '@/lib/api';
+import { getMockTopPlayers } from '@/lib/api';
 
 interface Player {
   rank: number;
@@ -12,40 +12,9 @@ interface Player {
   winRate: number;
 }
 
-export default async function TopPlayers() {
-  let topPlayers: Player[] = [];
-
-  try {
-    // Try to fetch real data from Riot API
-    const challengerData = await fetchChallengerLadder('euw1');
-    
-    if (challengerData && challengerData.length > 0) {
-      // Convert Riot API data to our format
-      topPlayers = challengerData.slice(0, 10).map((entry, index) => {
-        const wins = entry.wins || 0;
-        const losses = entry.losses || 0;
-        const total = wins + losses;
-        const winRate = total > 0 ? Math.round((wins / total) * 100) : 0;
-        
-        return {
-          rank: index + 1,
-          name: entry.summonerName,
-          team: '-',
-          role: 'Mid', // Would need additional API call to determine actual role
-          lp: entry.leaguePoints,
-          region: 'EUW',
-          winRate: winRate,
-        };
-      });
-    } else {
-      // Fallback to mock data if API fails
-      topPlayers = getMockTopPlayers();
-    }
-  } catch (error) {
-    console.error('Error fetching top players:', error);
-    // Use mock data on error
-    topPlayers = getMockTopPlayers();
-  }
+export default function TopPlayers() {
+  // Using mock data for static export
+  const topPlayers: Player[] = getMockTopPlayers();
 
   const getRoleIcon = (role: string) => {
     const roleMap: { [key: string]: string } = {
