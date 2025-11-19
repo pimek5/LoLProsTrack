@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LOLPROS.GG - Professional League of Legends Player Tracker
 
-## Getting Started
+A complete reconstruction of lolpros.gg built with Next.js 15, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🎮 Features
 
+### Core Features
+- **Live Game Search** - Find and watch live games from professional players
+- **Multi Stream** - Watch multiple Twitch streams simultaneously  
+- **Challengers Map** - View European Challenger player locations
+- **Ladder History** - Track historical rankings and LP changes
+- **Missing Challengers** - Help identify unrecognized high-rank players
+- **Name Changes** - Track recent summoner name updates
+
+### Pages
+- **Home** - Dashboard with featured content and quick access
+- **Players** - Browse all professional players with filtering
+- **Teams** - View all professional teams and rosters
+- **Search** - Search for players, teams, and summoner names
+- **Player Profiles** - Detailed statistics and information
+- **Team Profiles** - Team rosters, achievements, and stats
+- **Region Pages** - Regional Challenger ladders
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+lolpros-gg/
+├── src/
+│   ├── app/                    # App Router pages
+│   │   ├── live-game/         # Live games page
+│   │   ├── multi/             # Multi-stream viewer
+│   │   ├── map/               # Challengers map
+│   │   ├── ladder-history/    # Historical rankings
+│   │   ├── missing-challengers/ # Unidentified players
+│   │   ├── name-changes/      # Name change tracker
+│   │   ├── players/           # Players list
+│   │   ├── teams/             # Teams list
+│   │   ├── player/[name]/     # Dynamic player profiles
+│   │   ├── team/[team]/       # Dynamic team profiles
+│   │   ├── region/[region]/   # Regional ladders
+│   │   └── search/            # Search results
+│   └── components/            # Reusable components
+│       ├── Navbar.tsx
+│       ├── Footer.tsx
+│       ├── SearchBar.tsx
+│       ├── LiveGameSearch.tsx
+│       ├── TopPlayers.tsx
+│       └── RecentNameChanges.tsx
+├── public/                    # Static assets
+└── .github/                   # GitHub configuration
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework:** Next.js 15 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Linting:** ESLint
+- **Package Manager:** npm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Key Components
 
-## Deploy on Vercel
+### Navbar
+Responsive navigation with mobile menu support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### SearchBar
+Global search for players, teams, and summoner names
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### LiveGameSearch
+Real-time display of ongoing professional player games with filtering
+
+### TopPlayers
+Ranking display of top Challenger players
+
+### RecentNameChanges
+Tracker for recent summoner name updates
+
+## 📄 Pages
+
+- `/` - Home page with dashboard
+- `/live-game` - Live games with filters
+- `/multi` - Multi-stream Twitch viewer
+- `/map` - European Challengers map
+- `/ladder-history` - Historical ladder tracking
+- `/missing-challengers` - Unidentified high-rank players
+- `/name-changes` - Name change history
+- `/players` - All players with search/filter
+- `/teams` - All teams with search/filter
+- `/player/[name]` - Individual player profile
+- `/team/[team]` - Individual team profile
+- `/region/[region]` - Regional Challenger ladder
+- `/search` - Search results page
+
+## 🔮 Future Enhancements
+
+- Integration with Riot Games API for real data
+- Live match spectating functionality
+- Interactive maps with Leaflet/Google Maps
+- Chart.js integration for statistics visualization
+- Real-time updates with WebSockets
+- User accounts and favorites
+- Mobile app version
+- More regions and leagues
+
+## 📝 Development
+
+### Build for Production
+```bash
+npm run build
+```
+
+### Start Production Server
+```bash
+npm start
+```
+
+### Lint Code
+```bash
+npm run lint
+```
+
+## 🤝 Contributing
+
+This is a reconstruction project. For the original site, visit [lolpros.gg](https://lolpros.gg)
+
+## ⚠️ Disclaimer
+
+This project is not endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
+## 📄 License
+
+This is a demonstration project for educational purposes.
