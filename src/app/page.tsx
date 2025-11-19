@@ -14,54 +14,68 @@ export default function Home() {
 
         {/* Feature Grid - 5 boxes */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-8">
-          <Link href="/live-game" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px]">
+          <Link href="/live-game" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px] border border-gray-700 hover:border-cyan-500/50">
             <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <svg className="w-12 h-12 text-gray-300 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 2v4m0 12v4M4 12h4m8 0h4m-3-7l-2 2m-6 6l-2 2m10 0l-2-2m-6-6l-2-2"/>
+              <svg className="w-14 h-14 text-cyan-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.3"/>
+                <circle cx="12" cy="12" r="8" strokeWidth="2"/>
+                <path d="M12 2v4m0 12v4M4 12h4m8 0h4"/>
               </svg>
             </div>
-            <h2 className="text-white font-semibold text-center">Live Game Search</h2>
+            <h2 className="text-white font-semibold text-center text-sm">Live Game Search</h2>
           </Link>
 
-          <Link href="/multi" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px]">
+          <Link href="/multi" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px] border border-gray-700 hover:border-cyan-500/50">
             <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <svg className="w-12 h-12 text-gray-300 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+              <svg className="w-14 h-14 text-cyan-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <rect x="3" y="3" width="7" height="7" rx="1" fill="currentColor" opacity="0.3"/>
+                <rect x="14" y="3" width="7" height="7" rx="1" fill="currentColor" opacity="0.3"/>
+                <rect x="3" y="14" width="7" height="7" rx="1" fill="currentColor" opacity="0.3"/>
+                <rect x="14" y="14" width="7" height="7" rx="1" fill="currentColor" opacity="0.3"/>
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
               </svg>
             </div>
-            <h2 className="text-white font-semibold text-center">Multi <span className="text-cyan-400">LOLPROS.GG</span></h2>
+            <h2 className="text-white font-semibold text-center text-sm">Multi <span className="text-cyan-400">LOLPROS.GG</span></h2>
           </Link>
 
-          <Link href="/map" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px]">
+          <Link href="/map" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px] border border-gray-700 hover:border-cyan-500/50">
             <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <svg className="w-12 h-12 text-gray-300 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
+              <svg className="w-14 h-14 text-cyan-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="currentColor" opacity="0.3"/>
+                <circle cx="12" cy="10" r="3" fill="currentColor"/>
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" strokeWidth="2"/>
               </svg>
             </div>
-            <h2 className="text-white font-semibold text-center">Challengers Map</h2>
+            <h2 className="text-white font-semibold text-center text-sm">Challengers Map</h2>
           </Link>
 
-          <Link href="/ladder-history" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px]">
+          <Link href="/ladder-history" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px] border border-gray-700 hover:border-cyan-500/50">
             <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <svg className="w-12 h-12 text-gray-300 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M12 20v-8m0 0V4m0 8l-8 4m8-4l8 4"/>
-                <circle cx="12" cy="4" r="2"/>
+              <svg className="w-14 h-14 text-cyan-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M3 3v18h18" strokeWidth="2"/>
+                <path d="M7 16l4-6 4 4 5-8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="7" cy="16" r="2" fill="currentColor"/>
+                <circle cx="11" cy="10" r="2" fill="currentColor"/>
+                <circle cx="15" cy="14" r="2" fill="currentColor"/>
+                <circle cx="20" cy="6" r="2" fill="currentColor"/>
               </svg>
             </div>
-            <h2 className="text-white font-semibold text-center">Ladder History</h2>
+            <h2 className="text-white font-semibold text-center text-sm">Ladder History</h2>
           </Link>
 
-          <Link href="/missing-challengers" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px]">
+          <Link href="/missing-challengers" className="bg-[#24283a] hover:bg-[#2a2f44] rounded-lg p-6 transition-colors group flex flex-col items-center justify-center min-h-[160px] border border-gray-700 hover:border-cyan-500/50">
             <div className="w-16 h-16 mb-4 flex items-center justify-center">
-              <svg className="w-12 h-12 text-gray-300 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3m.08 4h.01"/>
+              <svg className="w-14 h-14 text-cyan-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="12" cy="12" r="10" strokeWidth="2"/>
+                <path d="M12 8v4" strokeWidth="2.5" strokeLinecap="round"/>
+                <circle cx="12" cy="16" r="1" fill="currentColor"/>
+                <path d="M8 8h8M8 16h8" opacity="0.3" strokeWidth="2"/>
               </svg>
             </div>
-            <h2 className="text-white font-semibold text-center">Missing Challengers</h2>
+            <h2 className="text-white font-semibold text-center text-sm">Missing Challengers</h2>
           </Link>
         </div>
 
