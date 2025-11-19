@@ -1,152 +1,103 @@
-# LOLPROS.GG - Professional League of Legends Player Tracker
+# 🎮 LOLPros.gg Clone - League of Legends Pro Player Tracker
 
-A complete reconstruction of lolpros.gg built with Next.js 15, TypeScript, and Tailwind CSS.
+A modern, full-featured clone of [lolpros.gg](https://lolpros.gg) built with Next.js 16, TypeScript, and Tailwind CSS. Track professional League of Legends players, view live games, check Challenger ladders, and monitor summoner name changes.
 
-## 🎮 Features
+![Next.js](https://img.shields.io/badge/Next.js-16.0.3-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=flat-square&logo=tailwindcss)
+![Riot API](https://img.shields.io/badge/Riot_API-Integrated-d32f2f?style=flat-square)
 
-### Core Features
-- **Live Game Search** - Find and watch live games from professional players
-- **Multi Stream** - Watch multiple Twitch streams simultaneously  
-- **Challengers Map** - View European Challenger player locations
-- **Ladder History** - Track historical rankings and LP changes
-- **Missing Challengers** - Help identify unrecognized high-rank players
-- **Name Changes** - Track recent summoner name updates
+## ✨ Features
 
-### Pages
-- **Home** - Dashboard with featured content and quick access
-- **Players** - Browse all professional players with filtering
-- **Teams** - View all professional teams and rosters
-- **Search** - Search for players, teams, and summoner names
-- **Player Profiles** - Detailed statistics and information
-- **Team Profiles** - Team rosters, achievements, and stats
-- **Region Pages** - Regional Challenger ladders
+### 🏠 Homepage
+- **Quick Access Links** - Fast navigation to all major features
+- **Top 10 Players** - Real-time Challenger ladder (EUW) from Riot API
+- **Recent Name Changes** - Track summoner name updates
+- **Regional Quick Links** - Access all 12 regions instantly
 
-## 🚀 Getting Started
+### 🎯 Core Features
+- **Live Game Search** - Find live games of professional players
+- **Multi Stream Viewer** - Watch multiple Twitch streams (1/2/4 layouts)
+- **Challengers Map** - European Challenger players location map
+- **Ladder History** - Historical ranking tracker
+- **Missing Challengers** - Unidentified high-rank players
+- **Name Changes** - Complete summoner name change history
+- **Player Profiles** - Stats, champions, social links
+- **Team Profiles** - Rosters, achievements, team info
+- **Regional Ladders** - Top players by region
 
-### Prerequisites
-- Node.js 18+
-- npm, yarn, pnpm, or bun
+## 🚀 Quick Start
 
-### Installation
-
-1. Install dependencies:
 ```bash
+# Clone repository
+git clone https://github.com/pimek5/LoLProsTrack.git
+cd LoLProsTrack
+
+# Install dependencies
 npm install
-```
 
-2. Run the development server:
-```bash
+# Add your Riot API key to .env.local
+echo "NEXT_PUBLIC_RIOT_API_KEY=your_key_here" > .env.local
+
+# Run development server
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+Open [http://localhost:3000](http://localhost:3000)
+
+## 🔑 Get Riot API Key
+
+1. Visit [developer.riotgames.com](https://developer.riotgames.com/)
+2. Sign in with Riot account
+3. Create application & copy API key
+4. Add to `.env.local`
 
 ## 📁 Project Structure
 
 ```
-lolpros-gg/
-├── src/
-│   ├── app/                    # App Router pages
-│   │   ├── live-game/         # Live games page
-│   │   ├── multi/             # Multi-stream viewer
-│   │   ├── map/               # Challengers map
-│   │   ├── ladder-history/    # Historical rankings
-│   │   ├── missing-challengers/ # Unidentified players
-│   │   ├── name-changes/      # Name change tracker
-│   │   ├── players/           # Players list
-│   │   ├── teams/             # Teams list
-│   │   ├── player/[name]/     # Dynamic player profiles
-│   │   ├── team/[team]/       # Dynamic team profiles
-│   │   ├── region/[region]/   # Regional ladders
-│   │   └── search/            # Search results
-│   └── components/            # Reusable components
-│       ├── Navbar.tsx
-│       ├── Footer.tsx
-│       ├── SearchBar.tsx
-│       ├── LiveGameSearch.tsx
-│       ├── TopPlayers.tsx
-│       └── RecentNameChanges.tsx
-├── public/                    # Static assets
-└── .github/                   # GitHub configuration
+src/
+├── app/              # Next.js pages
+├── components/       # React components
+└── lib/api.ts       # Riot API integration
+
+public/icons/        # SVG role & rank icons
 ```
 
-## 🛠️ Tech Stack
+## 🌍 Supported Regions
 
-- **Framework:** Next.js 15 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Linting:** ESLint
-- **Package Manager:** npm
+EUW • NA • KR • CN • EUNE • BR • LAN • LAS • OCE • RU • TR • JP
 
-## 🎨 Key Components
+## 🎨 Design Features
 
-### Navbar
-Responsive navigation with mobile menu support
+- Authentic lolpros.gg styling
+- Dark theme (#0a0e27)
+- SVG role icons
+- Challenger badges
+- Fully responsive
 
-### SearchBar
-Global search for players, teams, and summoner names
+## 📊 API Integration
 
-### LiveGameSearch
-Real-time display of ongoing professional player games with filtering
+✅ Real-time Challenger ladder  
+✅ Live game tracking  
+✅ Summoner search  
+✅ Champion data  
+✅ Mock data fallback  
 
-### TopPlayers
-Ranking display of top Challenger players
+See [API_SETUP.md](./API_SETUP.md) for details.
 
-### RecentNameChanges
-Tracker for recent summoner name updates
+## 🔧 Scripts
 
-## 📄 Pages
-
-- `/` - Home page with dashboard
-- `/live-game` - Live games with filters
-- `/multi` - Multi-stream Twitch viewer
-- `/map` - European Challengers map
-- `/ladder-history` - Historical ladder tracking
-- `/missing-challengers` - Unidentified high-rank players
-- `/name-changes` - Name change history
-- `/players` - All players with search/filter
-- `/teams` - All teams with search/filter
-- `/player/[name]` - Individual player profile
-- `/team/[team]` - Individual team profile
-- `/region/[region]` - Regional Challenger ladder
-- `/search` - Search results page
-
-## 🔮 Future Enhancements
-
-- Integration with Riot Games API for real data
-- Live match spectating functionality
-- Interactive maps with Leaflet/Google Maps
-- Chart.js integration for statistics visualization
-- Real-time updates with WebSockets
-- User accounts and favorites
-- Mobile app version
-- More regions and leagues
-
-## 📝 Development
-
-### Build for Production
 ```bash
-npm run build
+npm run dev      # Development server
+npm run build    # Production build
+npm start        # Production server
+npm run lint     # ESLint check
 ```
-
-### Start Production Server
-```bash
-npm start
-```
-
-### Lint Code
-```bash
-npm run lint
-```
-
-## 🤝 Contributing
-
-This is a reconstruction project. For the original site, visit [lolpros.gg](https://lolpros.gg)
-
-## ⚠️ Disclaimer
-
-This project is not endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
 
 ## 📄 License
 
-This is a demonstration project for educational purposes.
+Educational purposes only. League of Legends © Riot Games, Inc.
+
+---
+
+Built with ❤️ using Next.js 16 & Riot Games API
