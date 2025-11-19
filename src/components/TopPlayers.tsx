@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { getMockTopPlayers } from '@/lib/api';
 
 interface Player {
@@ -18,13 +17,13 @@ export default function TopPlayers() {
 
   const getRoleIcon = (role: string) => {
     const roleMap: { [key: string]: string } = {
-      'Top': '/icons/roles/top.svg',
-      'Jungle': '/icons/roles/jungle.svg',
-      'Mid': '/icons/roles/mid.svg',
-      'Bottom': '/icons/roles/bottom.svg',
-      'Support': '/icons/roles/support.svg',
+      'Top': '/LoLProsTrack/icons/roles/top.svg',
+      'Jungle': '/LoLProsTrack/icons/roles/jungle.svg',
+      'Mid': '/LoLProsTrack/icons/roles/mid.svg',
+      'Bottom': '/LoLProsTrack/icons/roles/bottom.svg',
+      'Support': '/LoLProsTrack/icons/roles/support.svg',
     };
-    return roleMap[role] || '/icons/roles/mid.svg';
+    return roleMap[role] || '/LoLProsTrack/icons/roles/mid.svg';
   };
 
   return (
@@ -50,20 +49,16 @@ export default function TopPlayers() {
               <div className="flex items-center gap-2 w-32">
                 <span className="text-white font-semibold">{player.name}</span>
               </div>
-              <Image 
+              <img 
                 src={getRoleIcon(player.role)} 
                 alt={player.role}
-                width={16}
-                height={16}
                 className="w-4 h-4 opacity-70"
               />
             </div>
             <div className="flex items-center gap-3">
-              <Image 
-                src="/icons/ranks/challenger.svg" 
+              <img 
+                src="/LoLProsTrack/icons/ranks/challenger.svg" 
                 alt="Challenger"
-                width={20}
-                height={20}
                 className="w-5 h-5 text-purple-400"
               />
               <span className="text-gray-300 font-medium w-16 text-right">{player.lp} LP</span>
